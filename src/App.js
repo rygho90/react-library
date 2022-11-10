@@ -7,6 +7,7 @@ import {
   Nav,
   Button,
 } from "react-bootstrap";
+import BookCard from "./components/BookCard";
 
 function App() {
   return (
@@ -29,12 +30,21 @@ function App() {
         </Container>
         <Container className="mt-3">
           <Row xs={1} sm={2} md={3} lg={4} className="d-flex align-items-center justify-content-center">
-            <Card className="m-3" style={{ width: "18rem", height: "18rem" }}>Hello World</Card>
-            <Card className="m-3" style={{ width: "18rem", height: "18rem" }}>Hello World</Card>
-            <Card className="m-3" style={{ width: "18rem", height: "18rem" }}>Hello World</Card>
-            <Card className="m-3" style={{ width: "18rem", height: "18rem" }}>Hello World</Card>
-            <Card className="m-3" style={{ width: "18rem", height: "18rem" }}>Hello World</Card>
-            <Card className="m-3" style={{ width: "18rem", height: "18rem" }}>Hello World</Card>
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
           </Row>
         </Container>
       </Container>
