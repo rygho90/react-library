@@ -1,4 +1,13 @@
-import { Container, Row, Navbar, Nav, Button, Modal, Form } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Navbar,
+  Nav,
+  Button,
+  Modal,
+  Form,
+  Image,
+} from "react-bootstrap";
 import React, { useState } from "react";
 import BookCard from "./components/BookCard";
 
@@ -71,6 +80,17 @@ function App() {
           </Form>
           <hr></hr>
           <p>...or add information manually</p>
+
+          <Row>
+          <Image
+            src={require("./images/bookcover.png")}
+            alt="book cover"
+            thumbnail
+            className="mx-auto mb-3"
+            style={{ width: 200 }}
+          />
+          </Row>
+
           <Form>
             <Form.Group className="mb-3" controlId="formTitle">
               <Form.Label>Title</Form.Label>
@@ -87,7 +107,7 @@ function App() {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-        <Button onClick={handleCloseAddBookModal}>Add Book</Button>
+          <Button onClick={handleCloseAddBookModal}>Add Book</Button>
           <Button onClick={handleCloseAddBookModal}>Close</Button>
         </Modal.Footer>
       </Modal>
