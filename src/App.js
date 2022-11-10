@@ -1,4 +1,4 @@
-import { Container, Row, Navbar, Nav, Button, Modal } from "react-bootstrap";
+import { Container, Row, Navbar, Nav, Button, Modal, Form } from "react-bootstrap";
 import React, { useState } from "react";
 import BookCard from "./components/BookCard";
 
@@ -60,12 +60,34 @@ function App() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Add new book</Modal.Title>
+          <Modal.Title>New Book</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Hello World. It's me, ya boi.
+          <p>Search for a title...</p>
+          <Form>
+            <Form.Group className="mb-3" controlId="formSearch">
+              <Form.Control type="input" placeholder="Search" autoFocus />
+            </Form.Group>
+          </Form>
+          <hr></hr>
+          <p>...or add information manually</p>
+          <Form>
+            <Form.Group className="mb-3" controlId="formTitle">
+              <Form.Label>Title</Form.Label>
+              <Form.Control type="input" placeholder="Enter book title" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formAuthor">
+              <Form.Label>Author</Form.Label>
+              <Form.Control type="input" placeholder="Enter author name" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formPages">
+              <Form.Label>Pages</Form.Label>
+              <Form.Control type="input" placeholder="Enter number of pages" />
+            </Form.Group>
+          </Form>
         </Modal.Body>
         <Modal.Footer>
+        <Button onClick={handleCloseAddBookModal}>Add Book</Button>
           <Button onClick={handleCloseAddBookModal}>Close</Button>
         </Modal.Footer>
       </Modal>
